@@ -56,11 +56,8 @@ class ProfileScreen extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)
               ),
               const SizedBox(height: 8),
-              const SocialMediaRow(), 
-
-              const SizedBox(height: 8),
-            const SocialMediaRow(),
-            const SizedBox(height: 32),
+              const SocialMediaRow(),
+              const SizedBox(height: 32),
             // Tombol untuk menuju AboutScreen
             ElevatedButton(
               onPressed: () {
