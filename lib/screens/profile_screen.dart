@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/profile_photo.dart';
 import '../widgets/profile_info.dart';
-import '../widgets/social_media_row.dart'; // Tambahkan import ini
+import '../widgets/social_media_row.dart'; 
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -11,45 +11,45 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profil Mahasiswa'), //[cite: 1]
-        backgroundColor: Colors.blue, //[cite: 1]
-        foregroundColor: Colors.white, //[cite: 1]
+        title: const Text('Profil Mahasiswa'), 
+        backgroundColor: Colors.blue, 
+        foregroundColor: Colors.white, 
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0), //[cite: 1]
+          padding: const EdgeInsets.all(16.0), 
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center, //[cite: 1]
+            crossAxisAlignment: CrossAxisAlignment.center, 
             children: [
-              const SizedBox(height: 24), //[cite: 1]
-              const ProfilePhoto(radius: 60), //[cite: 1]
-              const SizedBox(height: 24), //[cite: 1]
+              const SizedBox(height: 24), 
+              const ProfilePhoto(radius: 60), 
+              const SizedBox(height: 24), 
               const ProfileInfo(
-                name: 'Habib Zikri Malik', //[cite: 1]
-                nim: '25.11.6400', //[cite: 1]
-                programStudi: 'S1 Informatika', //[cite: 1]
-                email: 'h.zikri@students.amikom.ac.id', //[cite: 1]
-                lokasi: 'Yogyakarta, Indonesia', //[cite: 1]
+                name: 'Habib Zikri Malik', 
+                nim: '25.11.6400', 
+                programStudi: 'S1 Informatika', 
+                email: 'h.zikri@students.amikom.ac.id', 
+                lokasi: 'Yogyakarta, Indonesia', 
               ),
-              const SizedBox(height: 24), //[cite: 1]
+              const SizedBox(height: 24), 
               // Tombol aksi
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly, //[cite: 1]
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
                 children: [
                   ElevatedButton.icon(
-                    onPressed: () {}, //[cite: 1]
-                    icon: const Icon(Icons.edit), //[cite: 1]
-                    label: const Text('Edit'), //[cite: 1]
+                    onPressed: () {}, 
+                    icon: const Icon(Icons.edit), 
+                    label: const Text('Edit'), 
                   ),
                   ElevatedButton.icon(
-                    onPressed: () {}, //[cite: 1]
-                    icon: const Icon(Icons.share), //[cite: 1]
-                    label: const Text('Bagikan'), //[cite: 1]
+                    onPressed: () {}, 
+                    icon: const Icon(Icons.share), 
+                    label: const Text('Bagikan'), 
                   ),
                 ],
               ),
               const SizedBox(height: 32),
-              // Menambahkan Widget SocialMediaRow di sini
+              
               const Text(
                 'Media Sosial', 
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)
