@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/profile_photo.dart';
 import '../widgets/profile_info.dart';
 import '../widgets/social_media_row.dart'; 
+import '../widgets/about_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -56,6 +57,22 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               const SocialMediaRow(), 
+
+              const SizedBox(height: 8),
+            const SocialMediaRow(),
+            const SizedBox(height: 32),
+            // Tombol untuk menuju AboutScreen
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AboutScreen(),
+                  ),
+                );
+              },
+              child: const Text('Tentang Aplikasi'),
+            ),
             ],
           ),
         ),
