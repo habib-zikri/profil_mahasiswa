@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/profile_photo.dart';
-import '../widgets/profile_info.dart';
+import '../widgets/profile_header.dart'; 
+import '../widgets/action_buttons.dart'; 
 import '../widgets/social_media_row.dart'; 
-import '../widgets/about_screen.dart';
+import '../widgets/about_screen.dart'; 
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -26,15 +26,7 @@ class ProfileScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center, 
                   children: [
                     const SizedBox(height: 24), 
-                    const ProfilePhoto(radius: 60), 
-                    const SizedBox(height: 24), 
-                    const ProfileInfo(
-                      name: 'Habib Zikri Malik', 
-                      nim: '25.11.6400', 
-                      programStudi: 'S1 Informatika', 
-                      email: 'h.zikri@students.amikom.ac.id', 
-                      lokasi: 'Yogyakarta, Indonesia', 
-                    ),
+                    const ProfileHeader(), 
                     const SizedBox(height: 32),
                     const Text(
                       'Media Sosial', 
@@ -59,24 +51,10 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Flexible(
+            const Flexible(
               flex: 1,
               child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
-                  children: [
-                    ElevatedButton.icon(
-                      onPressed: () {}, 
-                      icon: const Icon(Icons.edit), 
-                      label: const Text('Edit'), 
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () {}, 
-                      icon: const Icon(Icons.share), 
-                      label: const Text('Bagikan'), 
-                    ),
-                  ],
-                ),
+                child: ActionButtons(),
               ),
             ),
           ],
